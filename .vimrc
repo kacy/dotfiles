@@ -276,7 +276,3 @@ function! Browser()
 endfunction
 
 "}}}
-
-set tags=~/Development/Adzerk/adzerk/dotnet4tags
-
-

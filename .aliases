@@ -45,16 +45,23 @@ alias ...='cd ../..'
 alias m='mate .'
 alias adzerk='cd Development/Adzerk/adzerk'
 alias adzerkchef='cd Development/Adzerk/adzerk-chef'
+<<<<<<< HEAD
 alias pa='cd ~/Development/perfect-audience/'
 alias SSH='ruby ~/Development/perfect-audience/rtb/scripts/ssh.rb'
 alias docker-stop-all='docker stop $(docker ps -a -q)'
 alias docker-remove-all='docker rm $(docker ps -a -q)'
+=======
+>>>>>>> b108517943b78fc4a347cbda4a5b67d08d5d1aed
 
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
 
 # Flush DNS cache
+<<<<<<< HEAD
 alias flush="sudo killall -HUP mDNSResponder"
+=======
+alias flush="dscacheutil -flushcache"
+>>>>>>> b108517943b78fc4a347cbda4a5b67d08d5d1aed
 
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"

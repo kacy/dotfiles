@@ -1,5 +1,3 @@
-# Setup some colors to use later in interactive shell or/Users/kacy/.bashrc
-
 export COLOR_NC='\033[0m' # No Color
 export COLOR_WHITE='\033[1;37m'
 export COLOR_BLACK='\033[0;30m'
