@@ -27,7 +27,5 @@ export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/
 export AWS_CLOUDWATCH_HOME=/Users/kacy/Development/CloudWatch-1.0.13.4/
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home
 export PATH=$PATH:$AWS_CLOUDWATCH_HOME/bin:$JAVA_HOME
-export RTB=~/Development/perfect-audience/rtb
-export PATH=$PATH:~/Development/perfect-audience/rtb/scripts
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
