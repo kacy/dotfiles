@@ -1,3 +1,5 @@
+source ~/.aliases
+
 ZSH=$HOME/.zsh
 EDITOR=vim
 
@@ -75,7 +77,6 @@ plugins=(git)
 
 # Customize to your needs...
 export PATH=$PATH:/Users/user/.rvm/gems/ruby-1.9.3-p392/bin:/Users/user/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/user/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/user/.rvm/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/user/bin
-source ~/.aliases
 
 #bindkey '' backward-delete-char
 #bindkey '^[[3~' delete-char
