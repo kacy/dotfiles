@@ -28,8 +28,6 @@ alias help_mysql="echo -e '${COLOR_LIGHT_PURPLE}MySQL:
   ${COLOR_NC}mysqldump -u root -p -h host_here -P 3306 --skip-opt database_name table_name ${COLOR_GRAY} Backup table, no locks, specidfy host 
   ${COLOR_NC}mysql -u USERNAME -p database_name < your_output_file.sql ${COLOR_GRAY} Restore from backup'"
 
-alias remotesync="rsync -avzh --progress --stats --delete -e ssh kacyismc@manama.dreamhost.com:/backup"
-
 alias deepsleep="echo -e 'sudo pmset -a hibernatemode 0'"
 
 alias pwm="hostname"
@@ -42,9 +40,6 @@ alias whatsmyip='curl ifconfig.me'
 alias ls='ls -G'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias m='mate .'
-alias pa='cd ~/Development/perfect-audience/'
-alias SSH='ruby ~/Development/perfect-audience/rtb/scripts/ssh.rb'
 alias docker-stop-all='docker stop $(docker ps -a -q)'
 alias docker-remove-all='docker rm $(docker ps -a -q)'
 
@@ -76,7 +71,6 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume 0'"
 alias pumpitup="osascript -e 'set volume 10'"
-alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 alias takepicture="imagesnap - > ~/Pictures/isight.jpg"
 
 
