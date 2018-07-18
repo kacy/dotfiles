@@ -1,21 +1,22 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/syntastic'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-vinegar'
-Bundle 'scrooloose/nerdtree'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-obsession'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'guns/vim-clojure-static'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'tpope/vim-fireplace'
-Bundle 'fatih/vim-go'
+Plugin 'gmarik/vundle'
+Plugin 'scrooloose/syntastic'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-vinegar'
+Plugin 'scrooloose/nerdtree'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-obsession'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'guns/vim-clojure-static'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'tpope/vim-fireplace'
+Plugin 'fatih/vim-go'
+Plugin 'google/vim-jsonnet'
 
 
 set background=dark 

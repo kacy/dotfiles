@@ -28,20 +28,19 @@ alias help_mysql="echo -e '${COLOR_LIGHT_PURPLE}MySQL:
   ${COLOR_NC}mysqldump -u root -p -h host_here -P 3306 --skip-opt database_name table_name ${COLOR_GRAY} Backup table, no locks, specidfy host 
   ${COLOR_NC}mysql -u USERNAME -p database_name < your_output_file.sql ${COLOR_GRAY} Restore from backup'"
 
+alias remotesync="rsync -avzh --progress --stats --delete -e ssh my-old-host"
+
 alias deepsleep="echo -e 'sudo pmset -a hibernatemode 0'"
 
 alias pwm="hostname"
 alias gpl="git pull origin master"
 alias gps="git push origin master"
-alias generatetags="ctags -R -f dotnet4tags --exclude='bin' --extra=+fq --fields=+ianmzS --c#-kinds=cimnp *"
 
 alias whatismyip='curl ifconfig.me'
 alias whatsmyip='curl ifconfig.me'
 alias ls='ls -G'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias docker-stop-all='docker stop $(docker ps -a -q)'
-alias docker-remove-all='docker rm $(docker ps -a -q)'
 
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
@@ -55,7 +54,6 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 
 alias g="git"
 alias v="mvim"
-alias m="mate ."
 
 # Empty the Trash
 alias emptytrash="rm -rfv ~/.Trash"
@@ -71,6 +69,7 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume 0'"
 alias pumpitup="osascript -e 'set volume 10'"
+alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 alias takepicture="imagesnap - > ~/Pictures/isight.jpg"
 
 
@@ -95,5 +94,3 @@ extract () {
          echo "'$1' is not a valid file"
      fi
 }
-
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"

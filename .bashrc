@@ -22,10 +22,8 @@ export SHELL='/bin/zsh'
 
 alias colorslist="set | egrep 'COLOR_\w*'"  # lists all the colors
 
-
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:~/bin
-export AWS_CLOUDWATCH_HOME=/Users/kacy/Development/CloudWatch-1.0.13.4/
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home
-export PATH=$PATH:$AWS_CLOUDWATCH_HOME/bin:$JAVA_HOME
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source /etc/bashrc_fitbit
+export PATH=$HOME/.local/bin:$PATH
