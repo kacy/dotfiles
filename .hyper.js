@@ -124,25 +124,28 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
-    
-    hyperline: {                                                                 
-      plugins: [                                                                 
-        "ip",                                                                    
-        "cpu",                                                                   
-        "spotify"                                                                
-      ]                                                                          
+    hyperline: {
+      plugins: [
+        "ip",
+        "cpu",
+        "battery",
+        "network",
+        "spotify",
+      ]
     },
   },
 
   // a list of plugins to fetch and install from npm
   // format: [@org/]project[#version]
   // examples:
-  //   `hyperpower`
-  //   `@company/project`
-  //   `project#1.0.1`
-      //'hyperocean',
-  plugins: [//'hyperterm-monokai',
-  'hyperterm-1password', 'hyper-hide-title', 'hyperline', "hyper-opacity", "hyper-ayu"],
+  plugins: [
+    //'hyperterm-monokai',
+    'hyperterm-1password', 
+    'hyper-hide-title', 
+    'hyperline', 
+    "hyper-opacity", 
+    "hyper-ayu"
+  ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
