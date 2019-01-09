@@ -6,7 +6,3 @@ note.txt
 tags
 .hg/*
 tmp/*
-.ssh/*
-.aws/*
-.ansible/*
-.atom/*
