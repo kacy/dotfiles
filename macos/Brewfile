@@ -2,7 +2,6 @@
 
 # Tools the shell config hooks into
 brew "mise"
-brew "starship"
 brew "fzf"
 brew "zoxide"
 brew "eza"

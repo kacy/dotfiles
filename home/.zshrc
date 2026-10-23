@@ -37,15 +37,26 @@ zstyle ':completion:*:corrections' format '%B%d (errors: %e)%b'
 zstyle ':completion:*:functions' ignored-patterns '_*'
 unset zcache
 
-# Fallback prompt for machines without starship.
-if (( ! $+commands[starship] )); then
-  autoload -Uz vcs_info
-  zstyle ':vcs_info:*' enable git
-  zstyle ':vcs_info:git:*' formats ' %F{yellow}(%b)%f'
-  precmd_functions+=(vcs_info)
-  setopt prompt_subst
-  PROMPT='%(?.%F{green}.%F{red})➜%f %F{cyan}%~%f${vcs_info_msg_0_} '
-fi
+# Prompt: a green arrow (red after a failed command), the directory, and the
+# git branch in green when clean or yellow with ✗ when dirty.
+autoload -U colors && colors
+setopt prompt_subst
+
+function git_prompt_branch {
+  echo -n "($(git symbolic-ref HEAD 2>/dev/null | awk -F/ '{print $NF}'))"
+}
+
+function git_prompt_dirty {
+  git rev-parse --is-inside-work-tree &>/dev/null || return
+  if [[ -z $(git status --porcelain 2>/dev/null) ]]; then
+    echo "%{$fg[green]%}$(git_prompt_branch)%{$reset_color%}"
+  else
+    echo "%{$fg[yellow]%}$(git_prompt_branch)✗%{$reset_color%}"
+  fi
+}
+
+ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
+PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%~ $(git_prompt_dirty) % %{$reset_color%}'
 
 source "$HOME/.config/shell/aliases.sh"
 source "$HOME/.config/shell/tools.sh" zsh

@@ -4,5 +4,4 @@
 command -v mise >/dev/null 2>&1 && eval "$(mise activate "$1")"
 command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init "$1")"
 command -v fzf >/dev/null 2>&1 && eval "$(fzf --"$1" 2>/dev/null)"
-command -v starship >/dev/null 2>&1 && eval "$(starship init "$1")"
 true
