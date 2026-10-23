@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Report whether each domain given as an argument looks available or taken.
+# Usage: domaincheck example.com example.net
+
+for d in "$@"; do
+  if host "$d" | grep -q NXDOMAIN && whois "$d" | grep -qE "No match for|NOT FOUND"; then
+    echo "$d AVAILABLE"
+  else
+    echo "$d TAKEN"
+  fi
+  sleep 0.1
+done

@@ -1,0 +1,7 @@
+.DS_Store
+._*
+Thumbs.db
+*.swp
+*.swo
+*~
+.netrwhist
