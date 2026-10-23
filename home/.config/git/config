@@ -1,0 +1,79 @@
+[user]
+    name = Kacy Fortner
+    email = kacy@kacyfortner.com
+[github]
+    user = kacy
+[init]
+    defaultBranch = main
+[core]
+    quotepath = false
+[alias]
+    a = add
+    b = branch
+    br = branch
+    ci = commit
+    co = checkout
+    sw = switch
+    st = status
+    d = diff
+    dc = diff --cached
+    l = log
+    lg = log --graph --pretty=format:'%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr) %C(bold blue)<%an>%C(reset)' --abbrev-commit
+    pl = pull
+    ps = push
+    ph = push
+    undo = reset --soft HEAD^
+[pull]
+    rebase = true
+[push]
+    autoSetupRemote = true
+[fetch]
+    prune = true
+[rebase]
+    autoStash = true
+[merge]
+    conflictStyle = zdiff3
+[commit]
+    verbose = true              # show the diff in the commit message editor
+[diff]
+    algorithm = histogram
+    colorMoved = default
+    mnemonicPrefix = true       # label diff sides i/ w/ c/ instead of a/ b/
+[rerere]
+    enabled = true
+    autoUpdate = true
+[branch]
+    sort = -committerdate
+[tag]
+    sort = -version:refname
+[column]
+    ui = auto
+[apply]
+    whitespace = nowarn
+[color]
+    ui = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+# Use the GitHub CLI for HTTPS auth. The empty helper clears any system default.
+[credential "https://github.com"]
+    helper =
+    helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+    helper =
+    helper = !gh auth git-credential
+
+# Machine-specific settings, such as a work email or signing key.
+[include]
+    path = ~/.config/git/config.local
