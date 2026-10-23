@@ -29,6 +29,10 @@ run() {
   [ "$dry_run" -eq 1 ] || "$@"
 }
 
+if [ "$uninstall" -eq 0 ]; then
+  run git -C "$repo" submodule update --init
+fi
+
 cd "$src"
 find . \( -type f -o -type l \) -print0 | sort -z | while IFS= read -r -d '' rel; do
   rel=${rel#./}
