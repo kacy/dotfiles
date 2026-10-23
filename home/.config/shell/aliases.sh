@@ -1,4 +1,4 @@
-# Aliases and functions shared by zsh and bash.
+# Aliases and functions loaded by zsh. Kept POSIX so any shell can source it.
 
 alias ..='cd ..'
 alias ...='cd ../..'

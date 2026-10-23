@@ -1,5 +1,5 @@
-# Environment shared by every shell. Sourced from .zshenv, .zprofile,
-# .profile and .bashrc, so it must stay POSIX sh and safe to run twice.
+# Environment shared by every shell. Sourced from .zshenv, .zprofile and
+# .profile, so it must stay POSIX sh and safe to run twice.
 
 export EDITOR=vim
 command -v nvim >/dev/null 2>&1 && EDITOR=nvim

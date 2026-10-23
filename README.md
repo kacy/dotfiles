@@ -6,9 +6,10 @@ Shell, git, tmux and vim configuration for Linux and macOS.
 
 - `home/` mirrors `$HOME`. `install.sh` symlinks each file in it to the same
   path under your home directory.
-- `home/.config/shell/` holds the parts shared by zsh and bash: `env.sh`
+- `home/.config/shell/` holds the shell setup that `.zshrc` loads: `env.sh`
   (environment and `PATH`), `aliases.sh`, and `tools.sh` (hooks for mise,
-  zoxide, fzf and starship).
+  zoxide, fzf and starship). zsh is the main shell, so the repo has no
+  `.bashrc` and bash keeps the one the OS ships.
 - `vendor/oh-my-tmux` is Oh my tmux (`gpakosz/.tmux`), pinned as a git
   submodule. `home/.config/tmux/tmux.conf` is a symlink to its main config,
   which should never be edited. Settings go in
@@ -47,7 +48,6 @@ Machine-specific settings go in these files, which the repo does not track:
 | File | Loaded by |
 | --- | --- |
 | `~/.zshrc.local` | zsh |
-| `~/.bashrc.local` | bash |
 | `~/.config/git/config.local` | git, for a work email or signing key |
 | `~/.config/tmux/local.conf` | tmux, from `tmux.conf.local` |
 
