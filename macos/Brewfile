@@ -1,0 +1,31 @@
+# Install with: brew bundle --file=macos/Brewfile
+
+# Tools the shell config hooks into
+brew "mise"
+brew "starship"
+brew "fzf"
+brew "zoxide"
+brew "eza"
+
+# Everyday CLI
+brew "git"
+brew "gh"
+brew "tmux"
+brew "neovim"
+brew "ripgrep"
+brew "fd"
+brew "bat"
+brew "jq"
+brew "htop"
+brew "wget"
+brew "bash-completion@2"
+
+# Apps
+cask "1password"
+cask "ghostty"
+cask "google-chrome"
+cask "slack"
+cask "spotify"
+cask "visual-studio-code"
+cask "vlc"
+cask "font-hack-nerd-font"
