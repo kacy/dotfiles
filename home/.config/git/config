@@ -10,6 +10,7 @@
 [alias]
     a = add
     b = branch
+    br = branch
     ci = commit
     co = checkout
     sw = switch
@@ -32,11 +33,21 @@
     autoStash = true
 [merge]
     conflictStyle = zdiff3
+[commit]
+    verbose = true              # show the diff in the commit message editor
 [diff]
     algorithm = histogram
     colorMoved = default
+    mnemonicPrefix = true       # label diff sides i/ w/ c/ instead of a/ b/
 [rerere]
     enabled = true
+    autoUpdate = true
+[branch]
+    sort = -committerdate
+[tag]
+    sort = -version:refname
+[column]
+    ui = auto
 [apply]
     whitespace = nowarn
 [color]
@@ -54,6 +65,14 @@
     added = yellow
     changed = green
     untracked = cyan
+
+# Use the GitHub CLI for HTTPS auth. The empty helper clears any system default.
+[credential "https://github.com"]
+    helper =
+    helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+    helper =
+    helper = !gh auth git-credential
 
 # Machine-specific settings, such as a work email or signing key.
 [include]
