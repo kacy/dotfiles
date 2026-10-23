@@ -405,6 +405,10 @@ set -g history-limit 50000
 # start with mouse mode enabled
 set -g mouse on
 
+# open zsh in new panes even when tmux starts from a session whose $SHELL is
+# still another shell
+if '[ -x /bin/zsh ]' 'set -g default-shell /bin/zsh'
+
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
 #set -g status-keys vi
